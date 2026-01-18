@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+/*-----------------POUR ENLEVER LES MARGES DE BASE DE LA PAGE---------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF4D6;
+  color: #475239;
+  min-height: 100vh;
+}
+
+/* -----------------------MENU PRINCIPAL------------------------------------*/
+header {
+  /* remplit tout le haut de l'écran */
+  background-color: #475239;
+  display: flex;
+  align-items: center; /* met les case au centre verticalement*/
+  justify-content: flex-start;
+  margin: 0;
+  border-bottom: 2px solid #fff4d6;
+  height: auto;
+}
+
+.logo {
+  /*geres la taille du header et du logo */
+  padding: 15px 30px;
+  border-right: 2px solid #5a6f45;
+  margin: 0;
+  height: 40px;
+  width: auto;
+}
+
+/* ALIGNEMENT MENU PRINC IMPORTANT ! */ 
+.main-nav {
+  flex: left ;
+  justify-content: flex-start ;
+}
+
+/*alignement des onglest*/
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  margin: 0 ;
+  padding: 0;
+  gap: 5px;
+}
+
+/*Items du menu*/ 
+/* STYLE DE LA LISTE DE NAVIGATION DU HEADER */
+.nav-item>a {
+  display: block;
+  padding: 15px 35px;
+  color: #FFF4D6;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+/* fond des boutton quand on passe dessus*/
+.nav-item>a:hover {
+  background-color: #4a5f38;
+}
+
+/* ----------------------MENU PRINCIPAL--------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/*------------------FOND D'ECRAN-------------------------------------------------------------------------------------------------------------------------------------------*/
+.background {
+  width: 100%;
+  height: 600px;
+  background-image: url("images/fond d'écran.jpg");
+  background-color: #475239;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  /* IMPORTANT : empile le logo puis la bande */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* espace entre le logo et la bande */
+  position: relative;
+
+}
+
+
+
+/*-----FOND D'ECRAN------*/
+/* FOND D'ECRAN N°2 POUR LES PAGES AUTRE QUE LA PAGE D'ACCUEIL*/
+.background2 {
+  width: 100%;
+  height: 600px;
+  background-image: url("images/logoMaron.png");
+  background-color: #fff4d6;
+  background-position: center;
+  background-size: 600px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  /* IMPORTANT : empile le logo puis la bande */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* espace entre le logo et la bande */
+  position: relative;
+
+}
+
+/*-----LOGO SUR LE FOND---------*/
+.logo2 {
+  /*pour le gros logo du centre*/
+  width: 300px;
+  /* ajuste la taille du logo */
+  height: auto;
+}
+
+/* mais l'image en fond d'écran*/
+.fond_Page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/logo2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  opacity: 0.05;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/*-----BANDE SUR LE FOND------*/
+.titreCentre {
+  color: #FFF4D6;
+  background-color: rgba(71, 82, 57, 0.7);
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+
+/*=============================================================
+Second menu de navigation
+==============================================================*/
+
+.secondary-nav {
+  background-color: #a3b18a;
+  padding: 10px 50px;
+  border-bottom: 1px solid #3d4f2f;
+  position: relative;
+  z-index: 10;
+}
+
+.sub-nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
+  align-items: center;
+}
+
+.sub-nav-item a {
+  text-decoration: none;
+  color: #3d4f2f;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1.5px solid #3d4f2f;
+  padding: 5px 15px;
+  border-radius: 4px;
+}
+
+/* ---------------------- */
+/*   CARTE DES PLANTES    */
+/* ---------------------- */
+
+.plante {
+    background-color: rgba(200, 200, 200, 0.3);
+    border: 2px solid #96563B;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.plante h3 {
+    color: #485239;
+    margin-top: 0;
+}
+
+.img-plante {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 5px;
+    resize: vertical;
+}
+
+/* Bulle de plante en 2 colonnes */
+.plante {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    background-color: #a7b58047;
+    border: 2px solid #96563b2d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Colonne gauche : commentaire */
+.col-gauche {
+    width: 45%;
+}
+
+.col-gauche textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px;
+    resize: vertical;
+}
+
+/* Colonne droite : image + tâche */
+.col-droite {
+    width: 50%;
+    text-align: left;
+}
+
+.img-plante {
+    width: 150px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+/* POUR LES CASES JARDIN */
+
+.Jardin_case {
+  background-color: rgba(200, 200, 200, 0.3);
+  border: 2px solid #96563B;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+/*
+background-color: rgba(200, 200, 200, 0.3);
+border: 2px solid #96563B;
+border-radius: 10px;
+padding: 20px;
+margin-bottom: 25px;
+box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+*/
+
+/*=========================================
+3. CATALOGUE (PLANTES.HTML)
+========================================= */
+/* controle  l'appence de toutle les filtres, la bare de recherche*/
+
+.page-layout {
+display: flex;
+padding: 30px;
+gap: 40px;
+position: relative;
+z-index: 10;
+}
+
+/* le filtrage encadrer*/
+
+.filter-sidebar {
+width: 300px;
+background-color: rgba(255, 252, 242, 0.9);
+padding: 20px;
+border: 1.5px solid #8b4513;
+}
+
+/* les titre pour le filtrage*/
+
+.filter-title {
+color: #8b4513;
+text-align: center;
+border-bottom: 1px solid #ddd;
+padding-bottom: 10px;
+}
+
+
+/* Les blocs pour pour chaque section du filtrage*/
+/*
+fieldset {
+border: none;
+margin-bottom: 20px;
+padding: 0;
+}
+*/
+
+/* Le nom des filtres*/
+/*
+legend {
+font-weight: bold;
+color: #8b4513;
+margin-bottom: 8px;
+font-size: 14px;
+text-transform: uppercase;
+}
+*/
+
+/* Permet d'aligner les blocs et les nom pour chaque filytrage*/
+/*
+.filter-sidebar label {
+display: flex;
+align-items: center;
+gap: 8px;
+cursor: pointer;
+font-size: 12px;
+color: #8b4513;
+margin-bottom: 4px;
+}
+*/
+/* L'apparence de la barre de recherche*/
+
+.search-bar-container {
+display: flex;
+align-items: center;
+background: white;
+border: 1.5px solid #8b4513;
+border-radius: 8px;
+padding: 5px 15px;
+margin-bottom: 30px;
+}
+
+/* L'apparence des mots de la bare a l'intérieur*/
+/*
+.search-input {
+border: none;
+outline: none;
+width: 100%;
+padding: 10px;
+font-size: 16px;
+}
+*/
+
+/*Permet de faire les encadrer pour toutes les plantes*/
+/*
+.plants-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+*/
+/*fais les fond pour les encadrer pour chaque plante*/
+/*
+.plant-card {
+background: white;
+padding: 15px;
+border-radius: 10px;
+text-align: center;
+border: 1px solid #eee;
+transition: transform 0.2s;
+text-decoration: none;
+color: inherit;
+display: block;
+}
+*/
+/*Donne une impression que les cartes saute si on raproche la souris du l'encadrer*/
+/*
+.plant-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+*/
+/*Les images pour chaque plante*/
+/*
+.plant-card img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+border-radius: 5px;
+}
+*/
+/* =========================================
+   4. PAGE DÉTAIL (PLANTE-DETAIL.HTML)
+   ========================================= */
+/* c'est  la position des bloxes dans la page et a centre le contenu */
+/*
+.detail-page-layout {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+*/
+
+/* clest le box à gauche*/
+/*
+.detail-left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+*/
+/*Boxe de droite*/
+/*
+.detail-right-column {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+}
+*/
+/*l'encadrerautour des boxes*/
+/*
+article.detail-box {
+  background-color: #fdf6e3;
+  border: 1px solid #8b4513;
+  padding: 20px;
+}
+*/
+/* bouton comparer */
+/*
+.compare-btn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px 40px;
+  background-color: transparent;
+  color: #2e7d32;
+  border: 2px solid #2e7d32;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+*/
+
+/*Couleur du bouton quand on passe la souris dessus*/
+/*
+.compare-btn:hover {
+  background-color: #2e7d32;
+  color: white;
+}
+*/
+/*Encadrer pour contenir l'image*/
+/*
+.detail-image-container {
+  margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #eee9d7;
+}
+*/
+/*Permet au image de s'adapter dans les bloxes en fonction de l'appareil*/
+/*
+.detail-image-container img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+*/
+
+/*Permet l'aparition d'un texte si la photo n'est pas charger*/
+/*
+.image-placeholder {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3d4f2f;
+  text-transform: uppercase;
+}
+*/
+/*definie le nom de la plante*/
+/*
+#plant-name {
+  margin-top: 0;
+  color: #3d4f2f;
+  font-size: 1.8rem;
+}
+*/
+/*definie le nom de chaque catégories de chaque boxe*/
+/*
+.detail-box h3 {
+  color: #8b4513;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+*/
+
+/*definie le nom de chaque boxe*/
+/*
+.description-main-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #3d4f2f;
+  margin-bottom: 25px;
+}
+*/
+/* Listes de données épurées */
+/*Permet l'alignement  correcte en colonene entre les nom des sous catégories et leur*/
+/*
+dl {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 8px;
+  margin: 0 0 20px 15px;
+}
+*/
+/* La mise en forme des categorise dans chaque boxe*/
+/*
+dt {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #3d4f2f;
+  text-transform: uppercase;
+}
+*/
+/* La mise en forme des valeurs de chaque sous catégories*/
+/*
+dd {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+*/
+.footer {
+  background-color: #475239;
+  color: #ffcc76;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-text {
+  color: #ffcc76;
+  justify-content: center;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  gap: 20px;
+}
+
+.footer-btn {
+  color: #ffcc76;
+  transition: 0.3s;
+  text-decoration: none;
+}

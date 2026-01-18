@@ -1,0 +1,185 @@
+
+/* =========================================
+   4. PAGE DÉTAIL (PLANTE-DETAIL.HTML)
+   ========================================= */
+/* c'est  la position des bloxes dans la page et a centre le contenu */
+
+.detail-page-layout {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* clest le box à gauche*/
+.detail-left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/*Boxe de droite*/
+.detail-right-column {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+}
+/*l'encadrerautour des boxes*/
+article.detail-box {
+  background-color: #fdf6e3;
+  border: 1px solid #8b4513;
+  padding: 20px;
+}
+/* bouton comparer */
+.compare-btn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px 40px;
+  background-color: transparent;
+  color: #2e7d32;
+  border: 2px solid #2e7d32;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+/*Couleur du bouton quand on passe la souris dessus*/
+.compare-btn:hover {
+  background-color: #2e7d32;
+  color: white;
+}
+/*Encadrer pour contenir l'image*/
+.detail-image-container {
+  margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #eee9d7;
+}
+
+/*Permet au image de s'adapter dans les bloxes en fonction de l'appareil*/
+.detail-image-container img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+/*Permet l'aparition d'un texte si la photo n'est pas charger*/
+.image-placeholder {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3d4f2f;
+  text-transform: uppercase;
+}
+/*definie le nom de la plante*/
+#plant-name {
+  margin-top: 0;
+  color: #3d4f2f;
+  font-size: 1.8rem;
+}
+/*definie le nom de chaque catégories de chaque boxe*/
+.detail-box h3 {
+  color: #8b4513;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+/*definie le nom de chaque boxe*/
+.description-main-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #3d4f2f;
+  margin-bottom: 25px;
+}
+
+/* Listes de données épurées */
+/*Permet l'alignement  correcte en colonene entre les nom des sous catégories et leur*/
+dl {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 8px;
+  margin: 0 0 20px 15px;
+}
+/* La mise en forme des categorise dans chaque boxe*/
+dt {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #3d4f2f;
+  text-transform: uppercase;
+}
+/* La mise en forme des valeurs de chaque sous catégories*/
+dd {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* =========================================
+   5. FOOTER
+   ========================================= */
+.main-footer {
+  background-color: #3d4f2f;
+  color: #fff4d6;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+/*Adapation de la presentation si l'espace pour l'affichage de tout ne rentre pas dans un espace donner*/
+@media (max-width: 900px) {
+  .detail-page-layout {
+    flex-direction: column;
+  }
+
+  .plants-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  dl {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Adaptation au telephone portable*/
+.menu-toggle { display: none; }
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: 1px solid #fff4d6;
+    color: #fff4d6;
+    font-size: 24px;
+    padding: 5px 10px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .main-header { justify-content: space-between; }
+  
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background-color: #3d4f2f;
+    z-index: 1000;
+  }
+
+  .nav-list.active { display: flex; }
+  .nav-list a { border-bottom: 1px solid #5a6f45; width: 100%; box-sizing: border-box; }
+
+  .page-layout { flex-direction: column; padding: 15px; }
+  .filter-sidebar { width: 100%; margin-bottom: 20px; }
+  .plants-grid { grid-template-columns: 1fr; }
+  
+  .detail-page-layout { flex-direction: column; }
+  dl { grid-template-columns: 1fr; }
+}

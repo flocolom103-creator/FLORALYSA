@@ -1,0 +1,182 @@
+/* Réinitialisation et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5DC;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #FFFEF0;
+    min-height: 100vh;
+}
+
+/* En-tête */
+.header {
+    background-color: #6B8E6B;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #4A6B4A;
+}
+
+.logo {
+    color: #F5F5DC;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #F5F5DC;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #5A7D5A;
+    border-radius: 4px;
+}
+
+.nav-link.active {
+    background-color: #8FAF8F;
+    border-radius: 4px;
+}
+
+/* Contenu principal */
+.main-content {
+    padding: 30px;
+}
+
+.section-title {
+    font-size: 18px;
+    color: #4A6B4A;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* Carte de plante */
+.plant-card {
+    background-color: #FFF9E6;
+    border: 2px solid #D4C5A0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: box-shadow 0.3s;
+}
+
+.plant-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.plant-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.plant-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #D4C5A0;
+}
+
+.plant-details {
+    flex: 1;
+}
+
+.plant-name {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.plant-description {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Actions de plante */
+.plant-actions {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.plant-checkbox {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-top: 5px;
+    accent-color: #6B8E6B;
+}
+
+.comment-box {
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+}
+
+.comment-label {
+    font-size: 12px;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.comment-input {
+    width: 100%;
+    min-height: 60px;
+    padding: 8px;
+    border: 1px solid #D4C5A0;
+    border-radius: 4px;
+    background-color: #FFFEF0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    resize: vertical;
+    transition: border-color 0.3s;
+}
+
+.comment-input:focus {
+    outline: none;
+    border-color: #6B8E6B;
+}
+
+.comment-input::placeholder {
+    color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .plant-card {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .plant-act
